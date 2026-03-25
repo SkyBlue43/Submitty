@@ -139,19 +139,19 @@ class UsersView extends AbstractView {
 
         $this->core->getOutput()->addInternalCss('rotatingsectionsform.css');
 
-        return $this->core->getOutput()->renderTwigTemplate("admin/users/RotatingSectionsForm.twig", [
-            "students" => $students,
-            "reg_sections" => $reg_sections,
-            "reg_sections_count" => $reg_sections_count,
-            "not_null_counts" => $not_null_counts,
-            "null_counts" => $null_counts,
-            "max_section" => $max_section,
-            "update_registration_sections_url" => $this->core->buildCourseUrl(['sections', 'registration']),
-            "update_rotating_sections_url" => $this->core->buildCourseUrl(['sections', 'rotating']),
-            "csrf_token" => $this->core->getCsrfToken(),
-            "default_section" => $default_section,
-            "is_self_register" => $is_self_register,
-            "update_course_id_url" => $this->core->buildCourseUrl(['sections', 'update_course_id'])
-        ]);
+        // return $this->core->getOutput()->renderTwigTemplate("admin/users/RotatingSectionsForm.twig", [
+        //     "students" => $students,
+        //     "reg_sections" => $reg_sections,
+        //     "reg_sections_count" => $reg_sections_count,
+        //     "not_null_counts" => $not_null_counts,
+        //     "null_counts" => $null_counts,
+        //     "max_section" => $max_section,
+        //     "update_registration_sections_url" => $this->core->buildCourseUrl(['sections', 'registration']),
+        //     "update_rotating_sections_url" => $this->core->buildCourseUrl(['sections', 'rotating']),
+        //     "csrf_token" => $this->core->getCsrfToken(),
+        //     "default_section" => $default_section,
+        //     "is_self_register" => $is_self_register,
+        //     "update_course_id_url" => $this->core->buildCourseUrl(['sections', 'update_course_id'])
+        // ]);
     }
 }
